@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/node_modules/react-tweet/dist/twitter-theme/highlighted-label.module.css"],"sourcesContent":[".label {\n  display: flex;\n  height: calc(1.0625em);\n  width: calc(1.0625em);\n  max-width: 17px;\n  max-height: 17px;\n  margin-left: 4px;\n  margin-right: 2px;\n  border: var(--tweet-border);\n  border-radius: 2px;\n}\n\n.label > img {\n  width: 100%;\n  height: 100%;\n}\n"],"names":[],"mappings":"AAAA;;;;;;;;;;;;AAYA","ignoreList":[0]}}]
+}

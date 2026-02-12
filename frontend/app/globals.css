@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+@theme {
+  --shadow-card:
+    0px 2px 3px -1px rgba(0, 0, 0, 0.1), 0px 1px 0px 0px rgba(25, 28, 33, 0.02),
+    0px 0px 0px 1px rgba(25, 28, 33, 0.08);
+  --font-logo: "Inter", sans-serif;
+  --color-bg-side: #ffffff;
+  --color-border: #ebeeec;
+  --color-bg-hero: #fafbfc;
+  --color-icon: #4540bf;
+  --color-logo: #22242d;
+  --color-text-sec: #96999e;
+  --color-text-pri: #191c30;
+  --color-date: #C3C2C4;
+  --color-btn-pri: #4f47dc;
+  --color-btn-sec: #e2e7fd;
+  --color-text-ter: #635ebd;
+  --color-text-quad: #feffff;
+}

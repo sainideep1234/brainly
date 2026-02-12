@@ -1,0 +1,50 @@
+/* [project]/node_modules/react-tweet/dist/twitter-theme/quoted-tweet/quoted-tweet-header.module.css [app-client] (css) */
+.quoted-tweet-header-module__Cx2l9W__header {
+  line-height: var(--tweet-header-line-height);
+  font-size: var(--tweet-header-font-size);
+  white-space: nowrap;
+  overflow-wrap: break-word;
+  padding: .75rem .75rem 0;
+  display: flex;
+  overflow: hidden;
+}
+
+.quoted-tweet-header-module__Cx2l9W__avatar {
+  width: 20px;
+  height: 20px;
+  position: relative;
+}
+
+.quoted-tweet-header-module__Cx2l9W__avatarOverflow {
+  border-radius: 9999px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+}
+
+.quoted-tweet-header-module__Cx2l9W__avatarSquare {
+  border-radius: 4px;
+}
+
+.quoted-tweet-header-module__Cx2l9W__author {
+  align-items: center;
+  margin: 0 .5rem;
+  display: flex;
+}
+
+.quoted-tweet-header-module__Cx2l9W__authorText {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: 700;
+  overflow: hidden;
+}
+
+.quoted-tweet-header-module__Cx2l9W__username {
+  color: var(--tweet-font-color-secondary);
+  text-overflow: ellipsis;
+  margin-left: .125rem;
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=ee6dd_dist_twitter-theme_quoted-tweet_quoted-tweet-header_module_css_bad6b30c._.single.css.map*/

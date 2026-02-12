@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 10, "column": 0}, "map": {"version":3,"sources":["file:///Users/yash/Desktop/Developer/brainly/frontend/components/TwitCard.tsx"],"sourcesContent":["\"use client\"; // This must be a client component to use the \"sensor\" (Observer)\n\nimport Delete from \"@/public/icons/Delete\";\nimport Document from \"@/public/icons/Document\";\nimport Share from \"@/public/icons/Share\";\nimport { Tweet } from \"react-tweet\";\n\nexport default function LazyTweet({ id }: { id: string }) {\n  return (\n    <div className=\"max-w-xl  overflow-hidden px-4 rounded-md py-2 shadow-card\">\n    <CardHeader />\n      <Tweet id={id} />\n      <div className=\"flex gap-2 \">\n        <span className=\"text-btn-pri bg-btn-sec px-2 py-1 rounded-xl text-sm\">\n          #productivity\n        </span>\n      </div>\n      <span className=\"text-sm text-date\">Added on 10/3/2024</span>\n    </div>\n  );\n}\n"],"names":[],"mappings":";;;;;AAKA;AALA,cAAc,iEAAiE;;;AAOhE,SAAS,UAAU,EAAE,EAAE,EAAkB;IACtD,qBACE,8OAAC;QAAI,WAAU;;0BACf,8OAAC;;;;;0BACC,8OAAC,sJAAK;gBAAC,IAAI;;;;;;0BACX,8OAAC;gBAAI,WAAU;0BACb,cAAA,8OAAC;oBAAK,WAAU;8BAAuD;;;;;;;;;;;0BAIzE,8OAAC;gBAAK,WAAU;0BAAoB;;;;;;;;;;;;AAG1C"}}]
+}

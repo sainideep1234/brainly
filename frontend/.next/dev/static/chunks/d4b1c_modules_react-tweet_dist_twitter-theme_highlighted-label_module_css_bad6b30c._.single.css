@@ -1,0 +1,19 @@
+/* [project]/node_modules/react-tweet/dist/twitter-theme/highlighted-label.module.css [app-client] (css) */
+.highlighted-label-module__P9Fova__label {
+  border: var(--tweet-border);
+  border-radius: 2px;
+  width: 1.0625em;
+  max-width: 17px;
+  height: 1.0625em;
+  max-height: 17px;
+  margin-left: 4px;
+  margin-right: 2px;
+  display: flex;
+}
+
+.highlighted-label-module__P9Fova__label > img {
+  width: 100%;
+  height: 100%;
+}
+
+/*# sourceMappingURL=d4b1c_modules_react-tweet_dist_twitter-theme_highlighted-label_module_css_bad6b30c._.single.css.map*/
