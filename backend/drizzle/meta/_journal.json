@@ -1,0 +1,27 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1770959744236,
+      "tag": "0000_fair_aqueduct",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1770960716326,
+      "tag": "0001_solid_nextwave",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1770963365587,
+      "tag": "0002_aberrant_dark_phoenix",
+      "breakpoints": true
+    }
+  ]
+}

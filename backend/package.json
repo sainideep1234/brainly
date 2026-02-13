@@ -3,17 +3,26 @@
   "module": "index.ts",
   "type": "module",
   "private": true,
+  "scripts": {
+    "db:generate": "drizzle-kit generate",
+    "db:studio": "drizzle-kit studio ",
+    "db:migrate": "drizzle-kit migrate",
+    "dev": "bun src/index.ts"
+  },
   "devDependencies": {
     "@types/bun": "latest",
     "@types/express": "^5.0.6",
     "@types/jsonwebtoken": "^9.0.10",
-    "drizzle-kit": "^0.31.8"
+    "drizzle-kit": "^0.31.8",
+    "@types/cors": "^2.8.19"
   },
   "peerDependencies": {
     "typescript": "^5"
   },
   "dependencies": {
-    "@types/cors": "^2.8.19",
+    "@neondatabase/serverless": "^1.0.2",
+    "@types/bcrypt": "^6.0.0",
+    "bcrypt": "^6.0.0",
     "cors": "^2.8.6",
     "drizzle-orm": "^0.45.1",
     "express": "^5.2.1",

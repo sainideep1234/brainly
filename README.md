@@ -29,3 +29,6 @@ bun dev
 
 - add a share functionality 
 - add remove tags functionality 
+- add a route to update a particular content
+- can add orchestarted pattern 
+

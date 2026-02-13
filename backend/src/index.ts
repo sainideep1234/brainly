@@ -1,7 +1,7 @@
 import express from "express";
 import cors from "cors";
-import userRouter from "./userRoutes";
-import funcRouter from "./funtionRoutes";
+import userRouter from "./routes/userRoutes";
+import funcRouter from "./routes/contentRoutes";
 const app = express();
 
 const PORT = process.env.PORT || 8000;
