@@ -159,7 +159,7 @@ async function addContent({ description, title, link, tags }) {
         tags
     }, {
         headers: {
-            Authorization: `Bearer  ${localStorage.getItem("token")}`
+            Authorization: `Bearer ${localStorage.getItem("token")}`
         }
     });
     return response.data;
@@ -182,7 +182,7 @@ async function userSignUp(email, password, name) {
 async function deleteContent(id) {
     const response = await __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].delete(`${BASE_URL}/contents/${id}`, {
         headers: {
-            Authorization: `Bearer  ${localStorage.getItem("token")}`
+            Authorization: `Bearer ${localStorage.getItem("token")}`
         }
     });
     return response.data;
@@ -190,7 +190,7 @@ async function deleteContent(id) {
 async function searchByQuery(query) {
     const response = await __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].get(`${BASE_URL}/contents/search?q=${query}`, {
         headers: {
-            Authorization: `Bearer  ${localStorage.getItem("token")}`
+            Authorization: `Bearer ${localStorage.getItem("token")}`
         }
     });
     return response.data;
@@ -199,7 +199,7 @@ async function getAllContent() {
     try {
         const response = await __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].get(`${BASE_URL}/contents`, {
             headers: {
-                Authorization: `Bearer  ${localStorage.getItem("token")}`
+                Authorization: `Bearer ${localStorage.getItem("token")}`
             }
         });
         return response.data;
@@ -212,7 +212,7 @@ async function shareBrain(share) {
         share
     }, {
         headers: {
-            Authorization: `Bearer  ${localStorage.getItem("token")}`
+            Authorization: `Bearer ${localStorage.getItem("token")}`
         }
     });
     return response.data;
