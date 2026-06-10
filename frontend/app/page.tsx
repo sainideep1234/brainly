@@ -19,7 +19,7 @@ const LandingPage = ({ onGetStarted }: { onGetStarted: () => void }) => {
       <div className="absolute top-1/3 right-1/4 w-96 h-96 bg-indigo-900/10 rounded-full blur-[120px] pointer-events-none"></div>
 
       {/* Header */}
-      <header className="flex justify-between items-center px-8 py-6 z-10">
+      <header className="flex justify-between items-center px-8 py-6 z-40 relative">
         {/* Logo */}
         <div className="flex items-center gap-3">
           <svg className="w-8 h-8 text-violet-500 drop-shadow-[0_0_8px_rgba(139,92,246,0.8)] animate-pulse" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
@@ -63,34 +63,21 @@ const LandingPage = ({ onGetStarted }: { onGetStarted: () => void }) => {
       </header>
 
       {/* Main Content Area */}
-      <div className="flex-1 flex flex-col items-center justify-center z-10 -mt-12">
+      <div className="flex-1 flex flex-col items-center justify-center z-20 relative -mt-12">
         {currentTab === "home" ? (
           <main className="flex flex-col items-center text-center px-4 animate-fadeIn">
             {/* Title */}
             <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-white mb-6 leading-tight">
-              Meet{" "}
-              <span className="relative inline-block text-white font-extrabold">
-                Brainly
-                <span className="absolute left-0 -bottom-1 w-full h-[5px] bg-gradient-to-r from-violet-600 via-fuchsia-500 to-violet-600 rounded-full shadow-[0_2px_10px_rgba(139,92,246,0.6)]"></span>
-              </span>{" "}
-              <br />
+              Meet Brainly <br />
               <span className="flex items-center justify-center gap-3 mt-4 font-extrabold bg-gradient-to-r from-white via-violet-100 to-violet-300 bg-clip-text text-transparent">
                 Your Digital Second Brain <span className="animate-pulse">✨</span>
               </span>
             </h1>
 
             {/* Subtitle / Description - Max 10 words, single line */}
-            <p className="text-violet-200/90 text-sm md:text-lg font-medium mb-10 px-2 tracking-wide">
+            <p className="text-violet-200/90 text-sm md:text-lg font-medium px-2 tracking-wide">
               Save and search your videos, tweets, and documents instantly.
             </p>
-
-            {/* Action Button */}
-            <button
-              onClick={onGetStarted}
-              className="bg-violet-600 hover:bg-violet-500 text-white font-bold px-8 py-3.5 rounded-full text-md shadow-[0_0_30px_rgba(124,58,237,0.5)] hover:shadow-[0_0_40px_rgba(124,58,237,0.7)] hover:scale-105 active:scale-95 transition-all duration-300 cursor-pointer"
-            >
-              Capture Your Mind
-            </button>
           </main>
         ) : (
           <main className="max-w-5xl w-full px-8 flex flex-col items-center text-center animate-fadeIn">
@@ -132,11 +119,11 @@ const LandingPage = ({ onGetStarted }: { onGetStarted: () => void }) => {
         <div className="absolute left-1/2 -translate-x-1/2 -top-12 w-[80vw] h-[100px] bg-violet-600 rounded-full blur-[80px] opacity-70 pointer-events-none"></div>
 
         {/* Glowing Circle */}
-        <div className="absolute left-1/2 -translate-x-1/2 top-0 w-[140vw] md:w-[120vw] h-[1200px] rounded-[50%] bg-[#050410] border-t-4 border-violet-500/80 shadow-[0_-30px_80px_rgba(139,92,246,0.6)] flex flex-col items-center pt-8 md:pt-10 px-4">
-          <h2 className="text-xl md:text-3xl font-extrabold text-white tracking-tight text-center max-w-3xl">
+        <div className="absolute left-1/2 -translate-x-1/2 top-0 w-[140vw] md:w-[120vw] h-[1200px] rounded-[50%] bg-[#050410] border-t-4 border-violet-500/80 shadow-[0_-30px_80px_rgba(139,92,246,0.6)] flex flex-col items-center pt-16 md:pt-24 px-8">
+          <h2 className="text-xl md:text-3xl font-extrabold text-white tracking-tight text-center max-w-3xl leading-tight">
             Watch How Brainly Can Make Your Mind Clear!
           </h2>
-          <p className="max-w-2xl text-violet-300/80 text-xs md:text-sm text-center mt-3 leading-relaxed">
+          <p className="max-w-2xl text-violet-300/80 text-xs md:text-sm text-center mt-4 leading-relaxed">
             It improves efficiency through smart bookmarks, automated content categorization, and an advanced search that lets you find anything in seconds.
           </p>
         </div>
