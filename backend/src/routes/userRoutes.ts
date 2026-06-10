@@ -40,7 +40,7 @@ userRouter.post("/signin", async (req: Request, res: Response) => {
       });
     }
 
-    const jwtToken = jwt.sign(isUser.id, process.env.JWT_SECRET!);
+    const jwtToken = jwt.sign({ userId: isUser.id }, process.env.JWT_SECRET!);
 
     req.userId = isUser.id;
 
@@ -100,7 +100,7 @@ userRouter.post("/signup", async (req: Request, res: Response) => {
       });
       return;
     }
-    const token = jwt.sign(createdUser.id, process.env.JWT_SECRET!);
+    const token = jwt.sign({ userId: createdUser.id }, process.env.JWT_SECRET!);
     res.status(201).json({
       success: true,
       message: "user created  successfully",

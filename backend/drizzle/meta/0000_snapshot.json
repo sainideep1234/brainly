@@ -1,5 +1,5 @@
 {
-  "id": "31532345-8287-4b06-9b27-0d3b6c1537a9",
+  "id": "358abbab-5ef3-4946-bb15-15955a8020aa",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "version": "7",
   "dialect": "postgresql",
@@ -52,22 +52,22 @@
         },
         "user_id": {
           "name": "user_id",
-          "type": "integer",
+          "type": "varchar(191)",
           "primaryKey": false,
-          "notNull": false
+          "notNull": true
         }
       },
       "indexes": {},
       "foreignKeys": {
-        "content_user_id_users_user_id_fk": {
-          "name": "content_user_id_users_user_id_fk",
+        "content_user_id_users_id_fk": {
+          "name": "content_user_id_users_id_fk",
           "tableFrom": "content",
           "tableTo": "users",
           "columnsFrom": [
             "user_id"
           ],
           "columnsTo": [
-            "user_id"
+            "id"
           ],
           "onDelete": "no action",
           "onUpdate": "no action"
@@ -196,22 +196,11 @@
       "name": "users",
       "schema": "",
       "columns": {
-        "user_id": {
-          "name": "user_id",
-          "type": "integer",
+        "id": {
+          "name": "id",
+          "type": "varchar(191)",
           "primaryKey": true,
-          "notNull": true,
-          "identity": {
-            "type": "always",
-            "name": "users_user_id_seq",
-            "schema": "public",
-            "increment": "1",
-            "startWith": "1",
-            "minValue": "1",
-            "maxValue": "2147483647",
-            "cache": "1",
-            "cycle": false
-          }
+          "notNull": true
         },
         "names": {
           "name": "names",
@@ -221,6 +210,12 @@
         },
         "emails": {
           "name": "emails",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "passwords": {
+          "name": "passwords",
           "type": "varchar",
           "primaryKey": false,
           "notNull": true

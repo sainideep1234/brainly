@@ -6,7 +6,7 @@ export const typeEnum = pgEnum("types", ["youtube", "tweet", "document"]);
 export const usersTable = pgTable("users", {
   id: varchar("id", { length: 191 })
     .primaryKey()
-    .default(crypto.randomUUID())
+    .$defaultFn(() => crypto.randomUUID())
     .notNull(),
   name: varchar("names").notNull(),
   email: varchar("emails").notNull().unique(),
@@ -19,7 +19,9 @@ export const contentTable = pgTable("content", {
   descriptions: varchar("descriptions"),
   links: varchar("links"),
   type: typeEnum("types"),
-  userId: integer("user_id").references(() => usersTable.id),
+  userId: varchar("user_id", { length: 191 })
+    .references(() => usersTable.id)
+    .notNull(),
 });
 
 export const tagsTable = pgTable("tags", {
@@ -29,8 +31,12 @@ export const tagsTable = pgTable("tags", {
 
 export const contentTagsTable = pgTable("content_tags", {
   id: integer("content_tag_id").primaryKey().generatedAlwaysAsIdentity(),
-  contentId: integer("content_id").references(() => contentTable.id),
-  tagsId: integer("tag_id").references(() => tagsTable.id),
+  contentId: integer("content_id").references(() => contentTable.id, {
+    onDelete: "cascade",
+  }),
+  tagsId: integer("tag_id").references(() => tagsTable.id, {
+    onDelete: "cascade",
+  }),
 });
 
 export const contentRelations = relations(contentTable, ({ one, many }) => ({

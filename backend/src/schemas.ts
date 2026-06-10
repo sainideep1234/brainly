@@ -18,5 +18,5 @@ export const AddContent = z.object({
   description: z.string().optional(),
   link: z.string().optional(),
   tags: z.array(z.string()),
-  type: z.enum(["youtube", "document", "twitter"]),
+  type: z.enum(["youtube", "document", "tweet"]),
 });
