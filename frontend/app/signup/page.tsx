@@ -71,7 +71,7 @@ const SignUp = () => {
         </p>
         <button
           onClick={() => signup()}
-          className="bg-btn-pri text-white py-2 rounded-xl hover:bg-violet-500 font-bold text-lg my-4 transition-colors duration-300 cursor-pointer shadow-[0_0_20px_rgba(124,58,237,0.3)]"
+          className="bg-btn-pri text-white py-2 rounded-xl hover:bg-violet-600 font-bold text-lg my-4 transition-all duration-300 cursor-pointer hover:scale-[1.01] active:scale-[0.99]"
         >
           Submit
         </button>
