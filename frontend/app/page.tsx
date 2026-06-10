@@ -125,11 +125,11 @@ const LandingPage = ({ onGetStarted }: { onGetStarted: () => void }) => {
 
       {/* Bottom Glowing Planet / Arc */}
       <div className="relative w-full h-[180px] md:h-[220px] z-10 flex justify-center">
-        {/* Soft Ambient Glow layer behind the arc */}
-        <div className="absolute left-1/2 -translate-x-1/2 -top-12 w-[80vw] h-[100px] bg-violet-600 rounded-full blur-[80px] opacity-70 pointer-events-none"></div>
+        {/* Soft Ambient Glow layer behind the arc - Subtler opacity and colors */}
+        <div className="absolute left-1/2 -translate-x-1/2 -top-16 w-[80vw] h-[120px] bg-violet-700/25 rounded-full blur-[100px] pointer-events-none"></div>
 
         {/* Glowing Circle */}
-        <div className="absolute left-1/2 -translate-x-1/2 top-0 w-[140vw] md:w-[120vw] h-[1200px] rounded-[50%] bg-[#050410] border-t-4 border-violet-500/80 shadow-[0_-30px_80px_rgba(139,92,246,0.6)] flex flex-col items-center pt-16 md:pt-24 px-8">
+        <div className="absolute left-1/2 -translate-x-1/2 top-0 w-[140vw] md:w-[120vw] h-[1200px] rounded-[50%] bg-[#050410] border-t-2 border-violet-500/40 shadow-[0_-20px_60px_rgba(139,92,246,0.35)] flex flex-col items-center pt-16 md:pt-24 px-8">
           <h2 className="text-xl md:text-3xl font-extrabold text-white tracking-tight text-center max-w-3xl leading-tight">
             Watch How Brainly Can Make Your Mind Clear!
           </h2>

@@ -2236,14 +2236,14 @@ const LandingPage = ({ onGetStarted })=>{
                 className: "relative w-full h-[180px] md:h-[220px] z-10 flex justify-center",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "absolute left-1/2 -translate-x-1/2 -top-12 w-[80vw] h-[100px] bg-violet-600 rounded-full blur-[80px] opacity-70 pointer-events-none"
+                        className: "absolute left-1/2 -translate-x-1/2 -top-16 w-[80vw] h-[120px] bg-violet-700/25 rounded-full blur-[100px] pointer-events-none"
                     }, void 0, false, {
                         fileName: "[project]/app/page.tsx",
                         lineNumber: 129,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "absolute left-1/2 -translate-x-1/2 top-0 w-[140vw] md:w-[120vw] h-[1200px] rounded-[50%] bg-[#050410] border-t-4 border-violet-500/80 shadow-[0_-30px_80px_rgba(139,92,246,0.6)] flex flex-col items-center pt-16 md:pt-24 px-8",
+                        className: "absolute left-1/2 -translate-x-1/2 top-0 w-[140vw] md:w-[120vw] h-[1200px] rounded-[50%] bg-[#050410] border-t-2 border-violet-500/40 shadow-[0_-20px_60px_rgba(139,92,246,0.35)] flex flex-col items-center pt-16 md:pt-24 px-8",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
                                 className: "text-xl md:text-3xl font-extrabold text-white tracking-tight text-center max-w-3xl leading-tight",
