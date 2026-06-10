@@ -1030,11 +1030,319 @@ if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelper
     __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
 }
 }),
-"[project]/components/AddContentModal.tsx [app-client] (ecmascript)", ((__turbopack_context__, module, exports) => {
+"[project]/components/AddContentModal.tsx [app-client] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
 
-const e = new Error("Could not parse module '[project]/components/AddContentModal.tsx'\n\nExpression expected");
-e.code = 'MODULE_UNPARSABLE';
-throw e;
+__turbopack_context__.s([
+    "default",
+    ()=>__TURBOPACK__default__export__
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$public$2f$icons$2f$Cross$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/public/icons/Cross.tsx [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$httpclients$2f$httpclient$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/httpclients/httpclient.ts [app-client] (ecmascript)");
+;
+var _s = __turbopack_context__.k.signature();
+"use client";
+;
+;
+;
+const AddContentModal = ({ onAddClick, onSuccess })=>{
+    _s();
+    const [title, setTitle] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("");
+    const [description, setDescription] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("");
+    const [link, setLink] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("");
+    const [tagsInput, setTagsInput] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("");
+    const [type, setType] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("youtube");
+    const [loading, setLoading] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
+    const handleSubmit = async ()=>{
+        if (!title) {
+            alert("Title is required");
+            return;
+        }
+        setLoading(true);
+        try {
+            // Parse tags by splitting on commas and/or spaces, cleaning up hash characters
+            const tags = tagsInput.split(/[,\s]+/).map((t)=>t.trim().replace(/^#/, "")).filter(Boolean);
+            await (0, __TURBOPACK__imported__module__$5b$project$5d2f$httpclients$2f$httpclient$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["addContent"])({
+                title,
+                description: description || undefined,
+                link: link || undefined,
+                type,
+                tags
+            });
+            alert("Content added successfully");
+            if (onSuccess) {
+                onSuccess();
+            } else {
+                onAddClick();
+            }
+        } catch (err) {
+            alert("Failed to add content: " + (err.response?.data?.message || err.message));
+        } finally{
+            setLoading(false);
+        }
+    };
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+        className: "fixed inset-0 z-50 flex items-center justify-center p-4",
+        children: [
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "absolute inset-0 bg-black/80 backdrop-blur-xs",
+                onClick: onAddClick
+            }, void 0, false, {
+                fileName: "[project]/components/AddContentModal.tsx",
+                lineNumber: 58,
+                columnNumber: 7
+            }, ("TURBOPACK compile-time value", void 0)),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "relative z-10 bg-bg-side border border-border p-8 rounded-2xl shadow-2xl w-full max-w-lg text-text-pri animate-fadeIn",
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "flex justify-between items-center mb-6",
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
+                                className: "text-2xl font-extrabold text-text-pri tracking-tight",
+                                children: "Add Content"
+                            }, void 0, false, {
+                                fileName: "[project]/components/AddContentModal.tsx",
+                                lineNumber: 63,
+                                columnNumber: 11
+                            }, ("TURBOPACK compile-time value", void 0)),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                onClick: onAddClick,
+                                className: "hover:scale-110 transition-transform text-text-sec hover:text-text-pri cursor-pointer",
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$public$2f$icons$2f$Cross$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
+                                    fileName: "[project]/components/AddContentModal.tsx",
+                                    lineNumber: 68,
+                                    columnNumber: 13
+                                }, ("TURBOPACK compile-time value", void 0))
+                            }, void 0, false, {
+                                fileName: "[project]/components/AddContentModal.tsx",
+                                lineNumber: 64,
+                                columnNumber: 11
+                            }, ("TURBOPACK compile-time value", void 0))
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/components/AddContentModal.tsx",
+                        lineNumber: 62,
+                        columnNumber: 9
+                    }, ("TURBOPACK compile-time value", void 0)),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "flex flex-col gap-2 mb-4",
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
+                                htmlFor: "title",
+                                className: "text-xs font-semibold uppercase tracking-wider text-text-sec",
+                                children: [
+                                    "Title ",
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                        className: "text-red-500",
+                                        children: "*"
+                                    }, void 0, false, {
+                                        fileName: "[project]/components/AddContentModal.tsx",
+                                        lineNumber: 75,
+                                        columnNumber: 19
+                                    }, ("TURBOPACK compile-time value", void 0))
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/components/AddContentModal.tsx",
+                                lineNumber: 74,
+                                columnNumber: 11
+                            }, ("TURBOPACK compile-time value", void 0)),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                                type: "text",
+                                placeholder: "Enter title...",
+                                value: title,
+                                onChange: (e)=>setTitle(e.target.value),
+                                className: "outline-none border-border border rounded-xl px-4 py-2.5 text-base bg-bg-hero text-text-pri focus:border-violet-500/50 transition-colors duration-300 placeholder:text-gray-600",
+                                id: "title"
+                            }, void 0, false, {
+                                fileName: "[project]/components/AddContentModal.tsx",
+                                lineNumber: 77,
+                                columnNumber: 11
+                            }, ("TURBOPACK compile-time value", void 0))
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/components/AddContentModal.tsx",
+                        lineNumber: 73,
+                        columnNumber: 9
+                    }, ("TURBOPACK compile-time value", void 0)),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "flex flex-col gap-2 mb-4",
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
+                                htmlFor: "description",
+                                className: "text-xs font-semibold uppercase tracking-wider text-text-sec",
+                                children: "Description"
+                            }, void 0, false, {
+                                fileName: "[project]/components/AddContentModal.tsx",
+                                lineNumber: 88,
+                                columnNumber: 11
+                            }, ("TURBOPACK compile-time value", void 0)),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("textarea", {
+                                placeholder: "Enter description...",
+                                value: description,
+                                onChange: (e)=>setDescription(e.target.value),
+                                className: "outline-none border-border border rounded-xl px-4 py-2.5 text-base bg-bg-hero text-text-pri focus:border-violet-500/50 transition-colors duration-300 placeholder:text-gray-600 min-h-[90px] resize-none",
+                                id: "description"
+                            }, void 0, false, {
+                                fileName: "[project]/components/AddContentModal.tsx",
+                                lineNumber: 91,
+                                columnNumber: 11
+                            }, ("TURBOPACK compile-time value", void 0))
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/components/AddContentModal.tsx",
+                        lineNumber: 87,
+                        columnNumber: 9
+                    }, ("TURBOPACK compile-time value", void 0)),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "flex flex-col gap-2 mb-4",
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
+                                htmlFor: "link",
+                                className: "text-xs font-semibold uppercase tracking-wider text-text-sec",
+                                children: "Link"
+                            }, void 0, false, {
+                                fileName: "[project]/components/AddContentModal.tsx",
+                                lineNumber: 101,
+                                columnNumber: 11
+                            }, ("TURBOPACK compile-time value", void 0)),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                                type: "text",
+                                placeholder: "https://example.com...",
+                                value: link,
+                                onChange: (e)=>setLink(e.target.value),
+                                className: "outline-none border-border border rounded-xl px-4 py-2.5 text-base bg-bg-hero text-text-pri focus:border-violet-500/50 transition-colors duration-300 placeholder:text-gray-600",
+                                id: "link"
+                            }, void 0, false, {
+                                fileName: "[project]/components/AddContentModal.tsx",
+                                lineNumber: 104,
+                                columnNumber: 11
+                            }, ("TURBOPACK compile-time value", void 0))
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/components/AddContentModal.tsx",
+                        lineNumber: 100,
+                        columnNumber: 9
+                    }, ("TURBOPACK compile-time value", void 0)),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "flex flex-col gap-2 mb-5",
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
+                                htmlFor: "tag",
+                                className: "text-xs font-semibold uppercase tracking-wider text-text-sec",
+                                children: "Tags (separated by comma or space)"
+                            }, void 0, false, {
+                                fileName: "[project]/components/AddContentModal.tsx",
+                                lineNumber: 115,
+                                columnNumber: 11
+                            }, ("TURBOPACK compile-time value", void 0)),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                                type: "text",
+                                placeholder: "#useful #project...",
+                                value: tagsInput,
+                                onChange: (e)=>setTagsInput(e.target.value),
+                                className: "outline-none border-border border rounded-xl px-4 py-2.5 text-base bg-bg-hero text-text-pri focus:border-violet-500/50 transition-colors duration-300 placeholder:text-gray-600",
+                                id: "tag"
+                            }, void 0, false, {
+                                fileName: "[project]/components/AddContentModal.tsx",
+                                lineNumber: 118,
+                                columnNumber: 11
+                            }, ("TURBOPACK compile-time value", void 0))
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/components/AddContentModal.tsx",
+                        lineNumber: 114,
+                        columnNumber: 9
+                    }, ("TURBOPACK compile-time value", void 0)),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "flex flex-col gap-2 mb-8",
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                className: "text-xs font-semibold uppercase tracking-wider text-text-sec",
+                                children: "Content Type"
+                            }, void 0, false, {
+                                fileName: "[project]/components/AddContentModal.tsx",
+                                lineNumber: 130,
+                                columnNumber: 11
+                            }, ("TURBOPACK compile-time value", void 0)),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "grid grid-cols-3 gap-3",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                        type: "button",
+                                        onClick: ()=>setType("youtube"),
+                                        className: `py-2 px-4 rounded-xl border text-sm font-bold transition-all duration-300 cursor-pointer text-center ${type === "youtube" ? "bg-btn-pri border-btn-pri text-white shadow-md" : "border-border bg-bg-hero text-text-sec hover:text-text-pri hover:border-violet-500/30"}`,
+                                        children: "YouTube"
+                                    }, void 0, false, {
+                                        fileName: "[project]/components/AddContentModal.tsx",
+                                        lineNumber: 134,
+                                        columnNumber: 13
+                                    }, ("TURBOPACK compile-time value", void 0)),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                        type: "button",
+                                        onClick: ()=>setType("tweet"),
+                                        className: `py-2 px-4 rounded-xl border text-sm font-bold transition-all duration-300 cursor-pointer text-center ${type === "tweet" ? "bg-btn-pri border-btn-pri text-white shadow-md" : "border-border bg-bg-hero text-text-sec hover:text-text-pri hover:border-violet-500/30"}`,
+                                        children: "Tweet"
+                                    }, void 0, false, {
+                                        fileName: "[project]/components/AddContentModal.tsx",
+                                        lineNumber: 145,
+                                        columnNumber: 13
+                                    }, ("TURBOPACK compile-time value", void 0)),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                        type: "button",
+                                        onClick: ()=>setType("document"),
+                                        className: `py-2 px-4 rounded-xl border text-sm font-bold transition-all duration-300 cursor-pointer text-center ${type === "document" ? "bg-btn-pri border-btn-pri text-white shadow-md" : "border-border bg-bg-hero text-text-sec hover:text-text-pri hover:border-violet-500/30"}`,
+                                        children: "Document"
+                                    }, void 0, false, {
+                                        fileName: "[project]/components/AddContentModal.tsx",
+                                        lineNumber: 156,
+                                        columnNumber: 13
+                                    }, ("TURBOPACK compile-time value", void 0))
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/components/AddContentModal.tsx",
+                                lineNumber: 133,
+                                columnNumber: 11
+                            }, ("TURBOPACK compile-time value", void 0))
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/components/AddContentModal.tsx",
+                        lineNumber: 129,
+                        columnNumber: 9
+                    }, ("TURBOPACK compile-time value", void 0)),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                        onClick: handleSubmit,
+                        disabled: loading,
+                        className: "bg-btn-pri w-full py-3 rounded-xl text-white text-base font-extrabold hover:bg-violet-600 transition-all duration-300 cursor-pointer hover:scale-[1.01] active:scale-[0.99] disabled:bg-violet-800/50 disabled:text-text-sec flex justify-center items-center",
+                        children: loading ? "Adding..." : "Add Content"
+                    }, void 0, false, {
+                        fileName: "[project]/components/AddContentModal.tsx",
+                        lineNumber: 170,
+                        columnNumber: 9
+                    }, ("TURBOPACK compile-time value", void 0))
+                ]
+            }, void 0, true, {
+                fileName: "[project]/components/AddContentModal.tsx",
+                lineNumber: 59,
+                columnNumber: 7
+            }, ("TURBOPACK compile-time value", void 0))
+        ]
+    }, void 0, true, {
+        fileName: "[project]/components/AddContentModal.tsx",
+        lineNumber: 57,
+        columnNumber: 5
+    }, ("TURBOPACK compile-time value", void 0));
+};
+_s(AddContentModal, "TLmFwrvgC8/dg256v3xzJC4Xsbc=");
+_c = AddContentModal;
+const __TURBOPACK__default__export__ = AddContentModal;
+var _c;
+__turbopack_context__.k.register(_c, "AddContentModal");
+if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
+    __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
+}
 }),
 "[project]/ui/Sibebutton.tsx [app-client] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
