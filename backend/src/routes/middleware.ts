@@ -4,11 +4,11 @@ import type { JwtPayload } from "jsonwebtoken";
 const userMiddleware = (req: Request, res: Response, next: NextFunction) => {
   try {
     const header = req.headers.authorization;
-    const token = header?.split(" ")[1];
+    const token = header?.split(/\s+/)[1];
     if (!token) {
-      res.status(301).json({
+      res.status(401).json({
         success: false,
-        messsage: "jwt token in not present ",
+        messsage: "jwt token is not present ",
       });
       return;
     }

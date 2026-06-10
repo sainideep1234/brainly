@@ -19,7 +19,7 @@ export async function addContent({ description, title, link, tags }: Icontent) {
       link,
       tags,
     },
-    { headers: { Authorization: `Bearer  ${localStorage.getItem("token")}` } },
+    { headers: { Authorization: `Bearer ${localStorage.getItem("token")}` } },
   );
   return response.data;
 }
@@ -48,14 +48,14 @@ export async function userSignUp(
 
 export async function deleteContent(id: string) {
   const response = await axios.delete(`${BASE_URL}/contents/${id}`, {
-    headers: { Authorization: `Bearer  ${localStorage.getItem("token")}` },
+    headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
   });
   return response.data;
 }
 
 export async function searchByQuery(query: string) {
   const response = await axios.get(`${BASE_URL}/contents/search?q=${query}`, {
-    headers: { Authorization: `Bearer  ${localStorage.getItem("token")}` },
+    headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
   });
   return response.data;
 }
@@ -63,7 +63,7 @@ export async function searchByQuery(query: string) {
 export async function getAllContent() {
   try {
     const response = await axios.get(`${BASE_URL}/contents`, {
-      headers: { Authorization: `Bearer  ${localStorage.getItem("token")}` },
+      headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
     });
     return response.data;
   } catch (error) {
@@ -75,7 +75,7 @@ export async function shareBrain(share: boolean) {
   const response = await axios.post(
     `${BASE_URL}/contents/share`,
     { share },
-    { headers: { Authorization: `Bearer  ${localStorage.getItem("token")}` } }
+    { headers: { Authorization: `Bearer ${localStorage.getItem("token")}` } }
   );
   return response.data;
 }

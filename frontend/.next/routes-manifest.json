@@ -20,7 +20,16 @@
     "afterFiles": [],
     "fallback": []
   },
-  "dynamicRoutes": [],
+  "dynamicRoutes": [
+    {
+      "page": "/brain/[shareHash]",
+      "regex": "^/brain/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPshareHash": "nxtPshareHash"
+      },
+      "namedRegex": "^/brain/(?<nxtPshareHash>[^/]+?)(?:/)?$"
+    }
+  ],
   "staticRoutes": [
     {
       "page": "/",

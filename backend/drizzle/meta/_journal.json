@@ -15,6 +15,13 @@
       "when": 1781120555728,
       "tag": "0001_parallel_luminals",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1781123632279,
+      "tag": "0002_mute_trish_tilby",
+      "breakpoints": true
     }
   ]
 }

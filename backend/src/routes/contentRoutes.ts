@@ -222,7 +222,7 @@ contentRoutes.get("/share/:shareHash", async (req: Request, res: Response) => {
 
   try {
     const user = await db.query.usersTable.findFirst({
-      where: eq(usersTable.shareHash, shareHash),
+      where: eq(usersTable.shareHash, shareHash as string),
     });
 
     if (!user) {

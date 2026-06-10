@@ -56,8 +56,12 @@ __turbopack_context__.s([
     ()=>deleteContent,
     "getAllContent",
     ()=>getAllContent,
+    "getSharedBrain",
+    ()=>getSharedBrain,
     "searchByQuery",
     ()=>searchByQuery,
+    "shareBrain",
+    ()=>shareBrain,
     "userSignUp",
     ()=>userSignUp,
     "userSignin",
@@ -121,6 +125,20 @@ async function getAllContent() {
     } catch (error) {
         console.log(error);
     }
+}
+async function shareBrain(share) {
+    const response = await __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].post(`${BASE_URL}/contents/share`, {
+        share
+    }, {
+        headers: {
+            Authorization: `Bearer  ${localStorage.getItem("token")}`
+        }
+    });
+    return response.data;
+}
+async function getSharedBrain(shareHash) {
+    const response = await __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].get(`${BASE_URL}/contents/share/${shareHash}`);
+    return response.data;
 }
 if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
     __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
