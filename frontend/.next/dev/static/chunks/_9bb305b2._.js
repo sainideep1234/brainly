@@ -384,7 +384,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$public$2f$icons$2f$Youtube$2
 ;
 const YoutubeCard = ({ id, title, description, onDelete })=>{
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "max-w-sm break-inside-avoid shadow-card px-4 py-2 rounded-md flex-col bg-bg-side",
+        className: "max-w-sm break-inside-avoid shadow-2xl p-5 rounded-xl flex-col bg-bg-side border border-border",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$ui$2f$CardHeader$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                 title: title || "Youtube",
@@ -494,7 +494,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$public$2f$icons$2f$Twitter$2
 ;
 function LazyTweet({ id, title, onDelete }) {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "max-w-xl  overflow-hidden px-4 rounded-md py-2 shadow-card bg-bg-side",
+        className: "max-w-xl overflow-hidden p-5 rounded-xl shadow-2xl bg-bg-side border border-border",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$ui$2f$CardHeader$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                 title: title || "Tweet",
@@ -624,7 +624,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$ui$2f$CardHeader$2e$tsx__$5b
 ;
 const DocumentCard = ({ title, description, link, onDelete })=>{
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "max-w-sm break-inside-avoid block shadow-card px-4 py-2 rounded-md flex-col bg-bg-side",
+        className: "max-w-sm break-inside-avoid block shadow-2xl p-5 rounded-xl flex-col bg-bg-side border border-border",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$ui$2f$CardHeader$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                 title: "Document",

@@ -29,8 +29,8 @@ const SignUp = () => {
 
   return (
     <ScreenLayout className="flex justify-center items-center ">
-      <div className="min-w-lg shadow-card flex flex-col p-4 rounded-md bg-bg-side">
-        <h1 className="text-2xl my-4 font-bold w-full flex justify-center">
+      <div className="min-w-lg shadow-2xl flex flex-col p-8 rounded-2xl bg-bg-side border border-border">
+        <h1 className="text-2xl mb-6 font-bold w-full flex justify-center text-text-pri">
           Signup
         </h1>
         <label htmlFor="name" className="font-semibold text-lg text-text-pri">

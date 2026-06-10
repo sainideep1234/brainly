@@ -17,7 +17,7 @@ export default function LazyTweet({
   onDelete?: () => void;
 }) {
   return (
-    <div className="max-w-xl  overflow-hidden px-4 rounded-md py-2 shadow-card bg-bg-side">
+    <div className="max-w-xl overflow-hidden p-5 rounded-xl shadow-2xl bg-bg-side border border-border">
       <CardHeader title={title || "Tweet"} onDelete={onDelete}>
         <Twitter />
       </CardHeader>

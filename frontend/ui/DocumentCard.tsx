@@ -16,7 +16,7 @@ const DocumentCard = ({
   onDelete?: () => void;
 }) => {
   return (
-    <div className="max-w-sm break-inside-avoid block shadow-card px-4 py-2 rounded-md flex-col bg-bg-side">
+    <div className="max-w-sm break-inside-avoid block shadow-2xl p-5 rounded-xl flex-col bg-bg-side border border-border">
       <CardHeader title="Document" onDelete={onDelete}>
         <Document />
       </CardHeader>
