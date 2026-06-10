@@ -7,6 +7,7 @@ import {
   contentTable,
   contentTagsTable,
   tagsTable,
+  usersTable,
 } from "../db/model";
 import { eq, ilike, inArray, like } from "drizzle-orm";
 
@@ -165,5 +166,88 @@ contentRoutes.delete(
     }
   },
 );
+
+contentRoutes.post("/share", userMiddleware, async (req: Request, res: Response) => {
+  const userId = req.userId;
+  const { share } = req.body;
+
+  try {
+    if (share) {
+      const user = await db.query.usersTable.findFirst({
+        where: eq(usersTable.id, userId),
+      });
+
+      if (!user) {
+        return res.status(404).json({
+          success: false,
+          message: "User not found",
+        });
+      }
+
+      let hash = user.shareHash;
+      if (!hash) {
+        hash = crypto.randomUUID();
+        await db
+          .update(usersTable)
+          .set({ shareHash: hash })
+          .where(eq(usersTable.id, userId));
+      }
+
+      return res.status(200).json({
+        success: true,
+        hash,
+      });
+    } else {
+      await db
+        .update(usersTable)
+        .set({ shareHash: null })
+        .where(eq(usersTable.id, userId));
+
+      return res.status(200).json({
+        success: true,
+        message: "Shared link disabled successfully",
+      });
+    }
+  } catch (error) {
+    console.error("Error in share route:", error);
+    return res.status(500).json({
+      success: false,
+      message: "Internal Server Error",
+    });
+  }
+});
+
+contentRoutes.get("/share/:shareHash", async (req: Request, res: Response) => {
+  const { shareHash } = req.params;
+
+  try {
+    const user = await db.query.usersTable.findFirst({
+      where: eq(usersTable.shareHash, shareHash),
+    });
+
+    if (!user) {
+      return res.status(404).json({
+        success: false,
+        message: "Invalid or disabled share link",
+      });
+    }
+
+    const content = await db.query.contentTable.findMany({
+      where: eq(contentTable.userId, user.id),
+    });
+
+    return res.status(200).json({
+      success: true,
+      username: user.name,
+      data: content,
+    });
+  } catch (error) {
+    console.error("Error fetching shared content:", error);
+    return res.status(500).json({
+      success: false,
+      message: "Internal Server Error",
+    });
+  }
+});
 
 export default contentRoutes;

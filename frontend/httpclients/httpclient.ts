@@ -70,3 +70,17 @@ export async function getAllContent() {
     console.log(error);
   }
 }
+
+export async function shareBrain(share: boolean) {
+  const response = await axios.post(
+    `${BASE_URL}/contents/share`,
+    { share },
+    { headers: { Authorization: `Bearer  ${localStorage.getItem("token")}` } }
+  );
+  return response.data;
+}
+
+export async function getSharedBrain(shareHash: string) {
+  const response = await axios.get(`${BASE_URL}/contents/share/${shareHash}`);
+  return response.data;
+}

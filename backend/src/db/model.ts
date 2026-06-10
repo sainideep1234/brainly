@@ -11,6 +11,7 @@ export const usersTable = pgTable("users", {
   name: varchar("names").notNull(),
   email: varchar("emails").notNull().unique(),
   password: varchar("passwords").notNull(),
+  shareHash: varchar("share_hash").unique(),
 });
 
 export const contentTable = pgTable("content", {
