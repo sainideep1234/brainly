@@ -29,51 +29,54 @@ const SignUp = () => {
 
   return (
     <ScreenLayout className="flex justify-center items-center ">
-      <div className="min-w-lg shadow-2xl flex flex-col p-8 rounded-2xl bg-bg-side border border-border">
-        <h1 className="text-2xl mb-6 font-bold w-full flex justify-center text-text-pri">
-          Signup
+      <div className="w-full max-w-md shadow-2xl flex flex-col p-8 rounded-2xl bg-bg-side border border-border">
+        <h1 className="text-3xl font-extrabold text-center text-text-pri mb-8">
+          Sign Up
         </h1>
-        <label htmlFor="name" className="font-semibold text-lg text-text-pri">
+        <label htmlFor="name" className="font-semibold text-xs uppercase tracking-wider text-text-sec mb-2">
           Name
         </label>
         <input
           onChange={(e) => setName(e.target.value)}
           type="text"
           id="name"
-          className="outline-none border-border border rounded-lg px-4 py-1 text-lg mb-4 bg-bg-hero text-text-pri"
+          placeholder="John Doe"
+          className="outline-none border-border border rounded-xl px-4 py-2.5 text-base mb-5 bg-bg-hero text-text-pri focus:border-violet-500/50 transition-colors duration-300 placeholder:text-gray-600"
         />
-        <label htmlFor="email" className="font-semibold text-lg text-text-pri">
-          Email
+        <label htmlFor="email" className="font-semibold text-xs uppercase tracking-wider text-text-sec mb-2">
+          Email Address
         </label>
         <input
           onChange={(e) => setEmail(e.target.value)}
           type="email"
           id="email"
-          className="outline-none border-border border rounded-lg px-4 py-1 text-lg mb-4 bg-bg-hero text-text-pri"
+          placeholder="name@example.com"
+          className="outline-none border-border border rounded-xl px-4 py-2.5 text-base mb-5 bg-bg-hero text-text-pri focus:border-violet-500/50 transition-colors duration-300 placeholder:text-gray-600"
         />
-        <label htmlFor="password" className="font-semibold text-lg my-2 text-text-pri">
+        <label htmlFor="password" className="font-semibold text-xs uppercase tracking-wider text-text-sec mb-2">
           Password
         </label>
         <input
           onChange={(e) => setPassword(e.target.value)}
           type="password"
           id="password"
-          className="outline-none border-border border rounded-lg px-4 py-1 text-lg bg-bg-hero text-text-pri"
+          placeholder="••••••••"
+          className="outline-none border-border border rounded-xl px-4 py-2.5 text-base bg-bg-hero text-text-pri focus:border-violet-500/50 transition-colors duration-300 placeholder:text-gray-600"
         />
-        <p className="font-medium my-2 text-text-sec">
-          If you already have an account please{" "}
+        <p className="font-medium mt-4 mb-2 text-text-sec text-sm text-center">
+          Already have an account?{" "}
           <Link
             href={"/signin"}
-            className="font-bold hover:font-semibold text-violet-400 underline "
+            className="font-bold text-violet-400 hover:text-violet-300 hover:underline transition-colors duration-200"
           >
-            SignIn
+            Sign In
           </Link>
         </p>
         <button
           onClick={() => signup()}
-          className="bg-btn-pri text-white py-2 rounded-xl hover:bg-violet-600 font-bold text-lg my-4 transition-all duration-300 cursor-pointer hover:scale-[1.01] active:scale-[0.99]"
+          className="bg-btn-pri text-white py-2.5 rounded-xl hover:bg-violet-600 font-bold text-base mt-6 mb-2 transition-all duration-300 cursor-pointer hover:scale-[1.01] active:scale-[0.99] w-full"
         >
-          Submit
+          Sign Up
         </button>
       </div>
     </ScreenLayout>

@@ -55,32 +55,32 @@ const Herosection = ({
 
   return (
     <div className="flex-1 bg-bg-hero py-6 px-10">
-      <div className="flex justify-between my-8">
-        <h1 className="text-2xl text-text-pri px-8 font-extrabold">
+      <div className="flex justify-between items-center mb-8 gap-6 px-2">
+        <h1 className="text-2xl text-text-pri font-extrabold tracking-tight">
           ALL NOTES
         </h1>
-        <div className="max-w-xl border-border border flex-1 rounded-xl items-center gap-4 flex text-lg hover:ring-1 ring-gray-500 px-4 py-1  shadow-card bg-bg-side">
+        <div className="max-w-xl border-border border flex-1 h-11 rounded-xl items-center gap-3 flex text-base hover:border-violet-500/50 px-4 transition-colors duration-300 bg-bg-side">
           <Search />
           <input
             type="text"
             placeholder="search your query..."
-            className="focus:outline-0 placeholder:text-gray-400 w-full"
+            className="bg-transparent text-text-pri focus:outline-none placeholder:text-gray-500 w-full text-base"
           />
         </div>
-        <div className="flex gap-4">
+        <div className="flex gap-3">
           <button
             onClick={onShareClick}
-            className="flex items-center gap-4 text-text-sec px-4 py-1 bg-btn-sec rounded-md shadow-card hover:shadow hover:text-text-pri cursor-pointer"
+            className="h-11 flex items-center gap-2 text-text-sec px-4 bg-btn-sec border border-border rounded-xl hover:text-text-pri hover:bg-[#1f1b4c]/30 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 cursor-pointer"
           >
             <Share />
-            Share Brain
+            <span>Share Brain</span>
           </button>
           <button
             onClick={onAddClick}
-            className="flex items-center gap-2 text-text-quad px-4 py-2 bg-btn-pri rounded-md shadow-card hover:shadow hover:text-text-pri cursor-pointer"
+            className="h-11 flex items-center gap-2 text-text-quad px-4 bg-btn-pri rounded-xl hover:bg-violet-600 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 cursor-pointer"
           >
             <Add />
-            Add Content
+            <span>Add Content</span>
           </button>
         </div>
       </div>

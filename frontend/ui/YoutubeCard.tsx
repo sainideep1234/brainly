@@ -18,10 +18,8 @@ const YoutubeCard = ({
         <Youtube />
       </CardHeader>
       <iframe
-        className="rounded-md my-4"
+        className="w-full aspect-video rounded-md my-4"
         id="ytplayer"
-        width="300"
-        height="200"
         src={`https://www.youtube.com/embed/${id}`}
         allowFullScreen
       ></iframe>

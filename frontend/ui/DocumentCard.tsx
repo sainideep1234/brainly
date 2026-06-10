@@ -17,17 +17,16 @@ const DocumentCard = ({
 }) => {
   return (
     <div className="max-w-sm break-inside-avoid block shadow-2xl p-5 rounded-xl flex-col bg-bg-side border border-border">
-      <CardHeader title="Document" onDelete={onDelete}>
+      <CardHeader title={title || "Document"} onDelete={onDelete}>
         <Document />
       </CardHeader>
-      <h1 className="text-xl font-bold pt-4 text-text-pri">{title}</h1>
-      {description && <div className="py-4 text-text-sec">{description}</div>}
+      {description && <div className="py-4 text-text-sec text-sm leading-relaxed">{description}</div>}
       {link && (
         <a
           href={link}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-blue-500 hover:underline block pb-2 break-all"
+          className="text-violet-400 hover:underline block pb-2 break-all text-sm mt-2 font-medium"
         >
           {link}
         </a>

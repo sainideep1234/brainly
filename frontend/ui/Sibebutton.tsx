@@ -8,9 +8,9 @@ const Sibebutton = ({
   name: string;
 }) => {
   return (
-    <div className="flex gap-4 text-text-sec px-4  py-4 my-2 text-xl items-center hover:bg-blue-50 rounded-md hover:text-text-pri animate-all duartion-300">
+    <div className="flex gap-4 text-text-sec px-4 py-3 my-1 text-lg items-center rounded-lg hover:text-text-pri hover:bg-[#151233]/70 transition-all duration-300 cursor-pointer hover:scale-[1.02] active:scale-[0.98]">
       {children}
-      <span className="">{name}</span>
+      <span className="font-semibold">{name}</span>
     </div>
   );
 };
