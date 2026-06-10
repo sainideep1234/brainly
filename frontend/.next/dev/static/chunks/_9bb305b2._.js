@@ -2001,7 +2001,7 @@ const LandingPage = ({ onGetStarted })=>{
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                className: "font-extrabold text-2xl tracking-tight bg-gradient-to-r from-white via-violet-200 to-violet-400 bg-clip-text text-transparent",
+                                className: "font-extrabold text-2xl tracking-tight text-white",
                                 children: "Brainly"
                             }, void 0, false, {
                                 fileName: "[project]/app/page.tsx",
@@ -2089,7 +2089,7 @@ const LandingPage = ({ onGetStarted })=>{
                                     columnNumber: 28
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                    className: "flex items-center justify-center gap-3 mt-4 font-extrabold bg-gradient-to-r from-white via-violet-100 to-violet-300 bg-clip-text text-transparent",
+                                    className: "flex items-center justify-center gap-3 mt-4 font-extrabold text-violet-300",
                                     children: [
                                         "Your Digital Second Brain ",
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -2129,7 +2129,7 @@ const LandingPage = ({ onGetStarted })=>{
                     className: "max-w-5xl w-full px-8 flex flex-col items-center text-center animate-fadeIn",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                            className: "text-3xl md:text-4xl font-extrabold mb-8 bg-gradient-to-r from-white to-violet-300 bg-clip-text text-transparent",
+                            className: "text-3xl md:text-4xl font-extrabold mb-8 text-white",
                             children: "Features of Brainly"
                         }, void 0, false, {
                             fileName: "[project]/app/page.tsx",

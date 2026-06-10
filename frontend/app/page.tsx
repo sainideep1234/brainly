@@ -30,7 +30,7 @@ const LandingPage = ({ onGetStarted }: { onGetStarted: () => void }) => {
             <path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96-.44 2.5 2.5 0 0 1 0-3.12 3 3 0 0 1 0-3.88 2.5 2.5 0 0 1 0-3.12A2.5 2.5 0 0 1 9.5 2Z" />
             <path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96-.44 2.5 2.5 0 0 0 0-3.12 3 3 0 0 0 0-3.88 2.5 2.5 0 0 0 0-3.12A2.5 2.5 0 0 0 14.5 2Z" />
           </svg>
-          <span className="font-extrabold text-2xl tracking-tight bg-gradient-to-r from-white via-violet-200 to-violet-400 bg-clip-text text-transparent">
+          <span className="font-extrabold text-2xl tracking-tight text-white">
             Brainly
           </span>
         </div>
@@ -73,7 +73,7 @@ const LandingPage = ({ onGetStarted }: { onGetStarted: () => void }) => {
             {/* Title */}
             <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-white mb-6 leading-tight">
               Meet Brainly <br />
-              <span className="flex items-center justify-center gap-3 mt-4 font-extrabold bg-gradient-to-r from-white via-violet-100 to-violet-300 bg-clip-text text-transparent">
+              <span className="flex items-center justify-center gap-3 mt-4 font-extrabold text-violet-300">
                 Your Digital Second Brain <span className="animate-pulse">✨</span>
               </span>
             </h1>
@@ -85,7 +85,7 @@ const LandingPage = ({ onGetStarted }: { onGetStarted: () => void }) => {
           </main>
         ) : (
           <main className="max-w-5xl w-full px-8 flex flex-col items-center text-center animate-fadeIn">
-            <h2 className="text-3xl md:text-4xl font-extrabold mb-8 bg-gradient-to-r from-white to-violet-300 bg-clip-text text-transparent">
+            <h2 className="text-3xl md:text-4xl font-extrabold mb-8 text-white">
               Features of Brainly
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
