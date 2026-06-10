@@ -9,6 +9,10 @@ import { getAllContent } from "@/httpclients/httpclient";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 
+import YoutubeIcon from "@/public/icons/Youtube";
+import TwitterIcon from "@/public/icons/Twitter";
+import DocumentIcon from "@/public/icons/Document";
+
 const LandingPage = ({ onGetStarted }: { onGetStarted: () => void }) => {
   const [currentTab, setCurrentTab] = useState<"home" | "features">("home");
 
@@ -86,7 +90,9 @@ const LandingPage = ({ onGetStarted }: { onGetStarted: () => void }) => {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
               <div className="bg-[#0b091c]/80 border border-violet-500/20 p-6 rounded-2xl shadow-[0_10px_30px_rgba(0,0,0,0.3)] flex flex-col items-center hover:border-violet-500/40 hover:scale-[1.02] transition-all duration-300">
-                <div className="w-12 h-12 rounded-full bg-violet-600/20 flex items-center justify-center text-violet-400 mb-4 font-bold text-lg">YT</div>
+                <div className="w-12 h-12 rounded-full bg-red-500/15 flex items-center justify-center text-red-500 mb-4 shadow-[0_0_15px_rgba(239,68,68,0.15)] border border-red-500/25">
+                  <YoutubeIcon />
+                </div>
                 <h3 className="font-bold text-lg mb-2">YouTube Embeds</h3>
                 <p className="text-violet-300/80 text-sm leading-relaxed">
                   Directly embed, preview, and categorize YouTube videos within your central workspace.
@@ -94,7 +100,9 @@ const LandingPage = ({ onGetStarted }: { onGetStarted: () => void }) => {
               </div>
 
               <div className="bg-[#0b091c]/80 border border-violet-500/20 p-6 rounded-2xl shadow-[0_10px_30px_rgba(0,0,0,0.3)] flex flex-col items-center hover:border-violet-500/40 hover:scale-[1.02] transition-all duration-300">
-                <div className="w-12 h-12 rounded-full bg-violet-600/20 flex items-center justify-center text-violet-400 mb-4 font-bold text-lg">TW</div>
+                <div className="w-12 h-12 rounded-full bg-blue-500/15 flex items-center justify-center text-blue-400 mb-4 shadow-[0_0_15px_rgba(59,130,246,0.15)] border border-blue-500/25">
+                  <TwitterIcon />
+                </div>
                 <h3 className="font-bold text-lg mb-2">Twitter Bookmarks</h3>
                 <p className="text-violet-300/80 text-sm leading-relaxed">
                   Save X/Twitter posts and view them instantly using high-performance lazy loading.
@@ -102,7 +110,9 @@ const LandingPage = ({ onGetStarted }: { onGetStarted: () => void }) => {
               </div>
 
               <div className="bg-[#0b091c]/80 border border-violet-500/20 p-6 rounded-2xl shadow-[0_10px_30px_rgba(0,0,0,0.3)] flex flex-col items-center hover:border-violet-500/40 hover:scale-[1.02] transition-all duration-300">
-                <div className="w-12 h-12 rounded-full bg-violet-600/20 flex items-center justify-center text-violet-400 mb-4 font-bold text-lg">DOC</div>
+                <div className="w-12 h-12 rounded-full bg-emerald-500/15 flex items-center justify-center text-emerald-400 mb-4 shadow-[0_0_15px_rgba(16,185,129,0.15)] border border-emerald-500/25">
+                  <DocumentIcon />
+                </div>
                 <h3 className="font-bold text-lg mb-2">Notes & Docs</h3>
                 <p className="text-violet-300/80 text-sm leading-relaxed">
                   Draft descriptions, documentation, and ideas in a clean, markdown-friendly text viewer.
