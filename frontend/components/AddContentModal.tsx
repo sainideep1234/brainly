@@ -54,114 +54,125 @@ const AddContentModal = ({
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center">
-      <div className="absolute inset-0 bg-black/70" onClick={onAddClick}></div>
-      <div className="relative z-10 bg-bg-side border border-border p-6 rounded-lg shadow-lg min-w-xl text-text-pri">
-        <div className="flex flex-col gap-1 mt-4">
-          <button onClick={onAddClick} className="self-end hover:scale-105 transition-transform text-text-sec hover:text-text-pri cursor-pointer">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+      <div className="absolute inset-0 bg-black/80 backdrop-blur-xs" onClick={onAddClick}></div>
+      <div className="relative z-10 bg-bg-side border border-border p-8 rounded-2xl shadow-2xl w-full max-w-lg text-text-pri animate-fadeIn">
+        
+        {/* Modal Header */}
+        <div className="flex justify-between items-center mb-6">
+          <h2 className="text-2xl font-extrabold text-text-pri tracking-tight">Add Content</h2>
+          <button 
+            onClick={onAddClick} 
+            className="hover:scale-110 transition-transform text-text-sec hover:text-text-pri cursor-pointer"
+          >
             <Cross />
           </button>
-          <label htmlFor="title" className="text-lg font-medium text-text-pri">
-            Title*
+        </div>
+
+        {/* Form Fields */}
+        <div className="flex flex-col gap-2 mb-4">
+          <label htmlFor="title" className="text-xs font-semibold uppercase tracking-wider text-text-sec">
+            Title <span className="text-red-500">*</span>
           </label>
           <input
             type="text"
-            placeholder="Title.."
+            placeholder="Enter title..."
             value={title}
             onChange={(e) => setTitle(e.target.value)}
-            className="focus:ring-1 border-border border px-2 py-2 text-md font-normal rounded-md bg-bg-hero text-text-pri outline-none"
+            className="outline-none border-border border rounded-xl px-4 py-2.5 text-base bg-bg-hero text-text-pri focus:border-violet-500/50 transition-colors duration-300 placeholder:text-gray-600"
             id="title"
           />
         </div>
-        <div className="flex flex-col gap-1 mt-4">
-          <label htmlFor="description" className="text-lg font-medium text-text-pri">
+
+        <div className="flex flex-col gap-2 mb-4">
+          <label htmlFor="description" className="text-xs font-semibold uppercase tracking-wider text-text-sec">
             Description
           </label>
           <textarea
-            placeholder="Description.."
+            placeholder="Enter description..."
             value={description}
             onChange={(e) => setDescription(e.target.value)}
-            className="px-2 py-2 text-md font-normal border-border border rounded-md bg-bg-hero text-text-pri outline-none"
+            className="outline-none border-border border rounded-xl px-4 py-2.5 text-base bg-bg-hero text-text-pri focus:border-violet-500/50 transition-colors duration-300 placeholder:text-gray-600 min-h-[90px] resize-none"
             id="description"
           />
         </div>
-        <div className="flex flex-col gap-1 mt-4">
-          <label htmlFor="link" className="text-lg font-medium text-text-pri">
+
+        <div className="flex flex-col gap-2 mb-4">
+          <label htmlFor="link" className="text-xs font-semibold uppercase tracking-wider text-text-sec">
             Link
           </label>
           <input
             type="text"
-            placeholder="Link.."
+            placeholder="https://example.com..."
             value={link}
             onChange={(e) => setLink(e.target.value)}
-            className="border-border border px-2 py-2 text-md font-normal rounded-md bg-bg-hero text-text-pri outline-none"
+            className="outline-none border-border border rounded-xl px-4 py-2.5 text-base bg-bg-hero text-text-pri focus:border-violet-500/50 transition-colors duration-300 placeholder:text-gray-600"
             id="link"
           />
         </div>
-        <div className="flex flex-col gap-1 mt-4">
-          <label htmlFor="tag" className="text-lg font-medium text-text-pri">
+
+        <div className="flex flex-col gap-2 mb-5">
+          <label htmlFor="tag" className="text-xs font-semibold uppercase tracking-wider text-text-sec">
             Tags (separated by comma or space)
           </label>
           <input
             type="text"
-            placeholder="#useful, #project.."
+            placeholder="#useful #project..."
             value={tagsInput}
             onChange={(e) => setTagsInput(e.target.value)}
-            className="border-border border px-2 py-2 text-md font-normal rounded-md bg-bg-hero text-text-pri outline-none"
+            className="outline-none border-border border rounded-xl px-4 py-2.5 text-base bg-bg-hero text-text-pri focus:border-violet-500/50 transition-colors duration-300 placeholder:text-gray-600"
             id="tag"
           />
         </div>
-        <div className="flex py-4 gap-4">
-          <div className="flex items-center">
-            <input
-              type="radio"
-              id="typeYoutube"
-              name="contentType"
-              value="youtube"
-              checked={type === "youtube"}
-              onChange={() => setType("youtube")}
-              className="w-4 h-4 cursor-pointer"
-            />
-            <label htmlFor="typeYoutube" className="text-lg font-semibold px-2 cursor-pointer">
-              Youtube
-            </label>
-          </div>
-          <div className="flex items-center">
-            <input
-              type="radio"
-              id="typeTweet"
-              name="contentType"
-              value="tweet"
-              checked={type === "tweet"}
-              onChange={() => setType("tweet")}
-              className="w-4 h-4 cursor-pointer"
-            />
-            <label htmlFor="typeTweet" className="text-lg font-semibold px-2 cursor-pointer">
+
+        {/* Custom Type Selector Tabs */}
+        <div className="flex flex-col gap-2 mb-8">
+          <span className="text-xs font-semibold uppercase tracking-wider text-text-sec">
+            Content Type
+          </span>
+          <div className="grid grid-cols-3 gap-3">
+            <button
+              type="button"
+              onClick={() => setType("youtube")}
+              className={`py-2 px-4 rounded-xl border text-sm font-bold transition-all duration-300 cursor-pointer text-center ${
+                type === "youtube"
+                  ? "bg-btn-pri border-btn-pri text-white shadow-md"
+                  : "border-border bg-bg-hero text-text-sec hover:text-text-pri hover:border-violet-500/30"
+              }`}
+            >
+              YouTube
+            </button>
+            <button
+              type="button"
+              onClick={() => setType("tweet")}
+              className={`py-2 px-4 rounded-xl border text-sm font-bold transition-all duration-300 cursor-pointer text-center ${
+                type === "tweet"
+                  ? "bg-btn-pri border-btn-pri text-white shadow-md"
+                  : "border-border bg-bg-hero text-text-sec hover:text-text-pri hover:border-violet-500/30"
+              }`}
+            >
               Tweet
-            </label>
-          </div>
-          <div className="flex items-center">
-            <input
-              type="radio"
-              id="typeDocuments"
-              name="contentType"
-              value="document"
-              checked={type === "document"}
-              onChange={() => setType("document")}
-              className="w-4 h-4 cursor-pointer"
-            />
-            <label htmlFor="typeDocuments" className="text-lg font-semibold px-2 cursor-pointer">
-              Documents
-            </label>
+            </button>
+            <button
+              type="button"
+              onClick={() => setType("document")}
+              className={`py-2 px-4 rounded-xl border text-sm font-bold transition-all duration-300 cursor-pointer text-center ${
+                type === "document"
+                  ? "bg-btn-pri border-btn-pri text-white shadow-md"
+                  : "border-border bg-bg-hero text-text-sec hover:text-text-pri hover:border-violet-500/30"
+              }`}
+            >
+              Document
+            </button>
           </div>
         </div>
 
         <button
           onClick={handleSubmit}
           disabled={loading}
-          className="bg-text-ter w-full py-2 rounded-xl text-text-quad text-xl font-bold hover:text-text-pri transition-all duration-300 hover:bg-text-sec cursor-pointer disabled:bg-gray-400"
+          className="bg-btn-pri w-full py-3 rounded-xl text-white text-base font-extrabold hover:bg-violet-600 transition-all duration-300 cursor-pointer hover:scale-[1.01] active:scale-[0.99] disabled:bg-violet-800/50 disabled:text-text-sec flex justify-center items-center"
         >
-          {loading ? "Adding..." : "Add"}
+          {loading ? "Adding..." : "Add Content"}
         </button>
       </div>
     </div>

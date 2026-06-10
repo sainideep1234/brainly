@@ -261,11 +261,11 @@ const SignUp = ()=>{
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ScreenLayout$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
         className: "flex justify-center items-center ",
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: "min-w-lg shadow-2xl flex flex-col p-8 rounded-2xl bg-bg-side border border-border",
+            className: "w-full max-w-md shadow-2xl flex flex-col p-8 rounded-2xl bg-bg-side border border-border",
             children: [
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
-                    className: "text-2xl mb-6 font-bold w-full flex justify-center text-text-pri",
-                    children: "Signup"
+                    className: "text-3xl font-extrabold text-center text-text-pri mb-8",
+                    children: "Sign Up"
                 }, void 0, false, {
                     fileName: "[project]/app/signup/page.tsx",
                     lineNumber: 33,
@@ -273,7 +273,7 @@ const SignUp = ()=>{
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
                     htmlFor: "name",
-                    className: "font-semibold text-lg text-text-pri",
+                    className: "font-semibold text-xs uppercase tracking-wider text-text-sec mb-2",
                     children: "Name"
                 }, void 0, false, {
                     fileName: "[project]/app/signup/page.tsx",
@@ -284,7 +284,8 @@ const SignUp = ()=>{
                     onChange: (e)=>setName(e.target.value),
                     type: "text",
                     id: "name",
-                    className: "outline-none border-border border rounded-lg px-4 py-1 text-lg mb-4 bg-bg-hero text-text-pri"
+                    placeholder: "John Doe",
+                    className: "outline-none border-border border rounded-xl px-4 py-2.5 text-base mb-5 bg-bg-hero text-text-pri focus:border-violet-500/50 transition-colors duration-300 placeholder:text-gray-600"
                 }, void 0, false, {
                     fileName: "[project]/app/signup/page.tsx",
                     lineNumber: 39,
@@ -292,69 +293,71 @@ const SignUp = ()=>{
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
                     htmlFor: "email",
-                    className: "font-semibold text-lg text-text-pri",
-                    children: "Email"
+                    className: "font-semibold text-xs uppercase tracking-wider text-text-sec mb-2",
+                    children: "Email Address"
                 }, void 0, false, {
                     fileName: "[project]/app/signup/page.tsx",
-                    lineNumber: 45,
+                    lineNumber: 46,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
                     onChange: (e)=>setEmail(e.target.value),
                     type: "email",
                     id: "email",
-                    className: "outline-none border-border border rounded-lg px-4 py-1 text-lg mb-4 bg-bg-hero text-text-pri"
+                    placeholder: "name@example.com",
+                    className: "outline-none border-border border rounded-xl px-4 py-2.5 text-base mb-5 bg-bg-hero text-text-pri focus:border-violet-500/50 transition-colors duration-300 placeholder:text-gray-600"
                 }, void 0, false, {
                     fileName: "[project]/app/signup/page.tsx",
-                    lineNumber: 48,
+                    lineNumber: 49,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
                     htmlFor: "password",
-                    className: "font-semibold text-lg my-2 text-text-pri",
+                    className: "font-semibold text-xs uppercase tracking-wider text-text-sec mb-2",
                     children: "Password"
                 }, void 0, false, {
                     fileName: "[project]/app/signup/page.tsx",
-                    lineNumber: 54,
+                    lineNumber: 56,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
                     onChange: (e)=>setPassword(e.target.value),
                     type: "password",
                     id: "password",
-                    className: "outline-none border-border border rounded-lg px-4 py-1 text-lg bg-bg-hero text-text-pri"
+                    placeholder: "••••••••",
+                    className: "outline-none border-border border rounded-xl px-4 py-2.5 text-base bg-bg-hero text-text-pri focus:border-violet-500/50 transition-colors duration-300 placeholder:text-gray-600"
                 }, void 0, false, {
                     fileName: "[project]/app/signup/page.tsx",
-                    lineNumber: 57,
+                    lineNumber: 59,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                    className: "font-medium my-2 text-text-sec",
+                    className: "font-medium mt-4 mb-2 text-text-sec text-sm text-center",
                     children: [
-                        "If you already have an account please",
+                        "Already have an account?",
                         " ",
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                             href: "/signin",
-                            className: "font-bold hover:font-semibold text-violet-400 underline ",
-                            children: "SignIn"
+                            className: "font-bold text-violet-400 hover:text-violet-300 hover:underline transition-colors duration-200",
+                            children: "Sign In"
                         }, void 0, false, {
                             fileName: "[project]/app/signup/page.tsx",
-                            lineNumber: 65,
+                            lineNumber: 68,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0))
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/signup/page.tsx",
-                    lineNumber: 63,
+                    lineNumber: 66,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                     onClick: ()=>signup(),
-                    className: "bg-btn-pri text-white py-2 rounded-xl hover:bg-violet-500 font-bold text-lg my-4 transition-colors duration-300 cursor-pointer shadow-[0_0_20px_rgba(124,58,237,0.3)]",
-                    children: "Submit"
+                    className: "bg-btn-pri text-white py-2.5 rounded-xl hover:bg-violet-600 font-bold text-base mt-6 mb-2 transition-all duration-300 cursor-pointer hover:scale-[1.01] active:scale-[0.99] w-full",
+                    children: "Sign Up"
                 }, void 0, false, {
                     fileName: "[project]/app/signup/page.tsx",
-                    lineNumber: 72,
+                    lineNumber: 75,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0))
             ]
